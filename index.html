@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niharika Yadav | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Niharika Yadav</h1>
+        <p>Data Analyst | Web Developer | Python Enthusiast</p>
+      </div>
+      <div class="hero-image">
+        <img src="images/profile.jpeg" alt="Niharika Yadav">
+      </div>
+    </div>
+    <button id="theme-toggle">🌙</button>
+  </header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+    <!-- <header>
+    <button id="theme-toggle">🌙</button>
+    <div class="hero">
+      <img src="images/profile.jpeg" alt="Niharika Yadav">
+      <h1>Niharika Yadav</h1>
+      <p>Data Analyst | Web Developer | Python Enthusiast</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header> -->
+
+  <section id="about">
+    <div class="section-heading">
+      <h2 class="section-title">ABOUT ME</h2>
+    </div>
+    <p>Hi! I’m Niharika, a <b>Computer Science graduate</b> with a strong passion for both <b>Data Analysis</b> and <b>Full-Stack Web Development</b>. I enjoy working with data to uncover patterns, draw meaningful insights, and support decision-making through clear visualizations. On the development side, I love crafting clean, responsive, and user-friendly web interfaces while also exploring the backend to understand how everything works behind the scenes. My goal is to bridge the gap between data and technology by building solutions that are not only functional but also intuitive and impactful. I'm always eager to learn, experiment with new tools, and contribute to projects that make a real difference.</p>
+  </section>
+
+  <section id="projects">
+    <div class="section-heading">
+      <h2 class="section-title">PROJECTS</h2>
+    </div>
+
+    <h3>Data Analysis Projects</h3>
+    <div class="project-grid">
+      <div class="card">
+        <img src="images/social-media.png" alt="Social Media Trends EDA">
+        <h4>Social Media Trends EDA</h4>
+        <button onclick="toggleDetails('data1', this)">Read More</button>
+        <div class="details" id="data1">
+          <p>Cleaned and analyzed social media datasets using SQL and Snowflake. Built dashboards in Tableau and derived actionable insights on user behavior.</p>
+          <a href="https://public.tableau.com/app/profile/niharika.yadav8728/viz/SocialMediaTrendsEngagementDashboard2024/Dashboard1?publish=yes" target="_blank">Link To Dashboard</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/covid.png" alt="COVID-19 Dashboard">
+        <h4>COVID-19 Dashboard</h4>
+        <button onclick="toggleDetails('data2', this)">Read More</button>
+        <div class="details" id="data2">
+          <p>Performed time series analysis and visualization of COVID-19 data using Python, Pandas, and Tableau. Highlighted global trends and recovery insights.</p>
+          <a href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <h3>Web Development Projects</h3>
+    <div class="project-grid">
+      <div class="card">
+        <img src="images/spotify.png" alt="Spotify UI Clone">
+        <h4>Spotify UI Clone</h4>
+        <button onclick="toggleDetails('web1', this)">Read More</button>
+        <div class="details" id="web1">
+          <p>A responsive homepage clone of Spotify using HTML, CSS, and JavaScript. Includes navigation bar, playlist layout, and custom styling.</p>
+          <a href="https://github.com/niharika190202/spotify-ui-clone" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/rps.png" alt="Rock-Paper-Scissors Game">
+        <h4>Rock-Paper-Scissors Game</h4>
+        <button onclick="toggleDetails('web2', this)">Read More</button>
+        <div class="details" id="web2">
+          <p>Interactive browser game with DOM manipulation, score tracking, and responsive design using HTML, CSS, and JavaScript.</p>
+          <a href="https://rock-paper-scissors-web-s9rf.onrender.com/" target="_blank">Project Link</a>
+          <a href="https://github.com/niharika190202/rock-paper-scissors" target="_blank">GitHub   </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-heading">
+      <h2 class="section-title">SKILLS</h2>
+    </div>
+     <div class="skill-tags">
+    <span>Python</span>
+    <span>SQL</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Tableau</span>
+    <span>Snowflake</span>
+    <span>Excel</span>
+    <span>Git</span>
+  </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-heading">
+      <h2 class="section-title">CONTACT ME</h2>
+    </div>
+    <div class="contactme">
+        <p>Email: <a href="mailto:niharikay1902@gmail.com">niharikay1902@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/niharikayadav19/" target="_blank">niharikayadav19</a></p>
+        <p>GitHub: <a href="https://github.com/niharika190202" target="_blank">niharika190202</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Niharika Yadav</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    // Toggle dark mode for cards
+    document.querySelectorAll('.card').forEach(card => {
+    card.classList.toggle('dark-mode');
+    });
+
+    // Change emoji
+    const isDark = document.body.classList.contains('dark-mode');
+    toggleBtn.textContent = isDark ? '🌞' : '🌙';
+});
+
+    function toggleDetails(id, button) {
+    const elem = document.getElementById(id);
+    const isVisible = elem.style.display === 'block';
+    elem.style.display = isVisible ? 'none' : 'block';
+    button.textContent = isVisible ? 'Read More' : 'Read Less';
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 50 },
+        color: { value: "#888" },
+        size: { value: 3 },
+        move: { speed: 1 }
+    }
+    });
+  </script>
+
+</body>
+</html>
